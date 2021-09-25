@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity { //John Tricozzi
     private ArrayList<Item> groceryList;
     private RecyclerView recyclerView;
     private String newListItem;
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private recyclerAdapter setAdapter() { //change what's returned??
+    private recyclerAdapter setAdapter() { //need to change what's returned to get to work
         recyclerAdapter myAdapter = new recyclerAdapter(groceryList);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
