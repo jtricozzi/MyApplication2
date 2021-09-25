@@ -29,9 +29,12 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     public class MyViewHolder extends RecyclerView.ViewHolder{
         private TextView itemText;
 
+        private TextView itemNum;
+
         public MyViewHolder(final View view){
             super(view);
             itemText = view.findViewById(R.id.textView2);
+            itemNum = view.findViewById(R.id.textView);
         }
     }
 
@@ -46,6 +49,7 @@ public class recyclerAdapter extends RecyclerView.Adapter<recyclerAdapter.MyView
     public void onBindViewHolder(@NonNull recyclerAdapter.MyViewHolder holder, int position) {
         String listItem = itemList.get(position).getItemName();
         holder.itemText.setText(listItem);
+        holder.itemNum.setText(String.valueOf(position + 1));
     }
 
     @Override

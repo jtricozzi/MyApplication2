@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private String newListItem;
 
-
-
     Button myButton;
     EditText myEdit;
     TextView myText;
@@ -45,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 //myText = (TextView)findViewById(R.id.textView3);
                 //myText.setText("Welcome "+myEdit.getText().toString()+"!");
                 groceryList.add(new Item(myEdit.getText().toString()));
+                myEdit.getText().clear();
                 adapter.notifyItemInserted(groceryList.size());
             }
         });
